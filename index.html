@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPC website</title>
+    <link rel="stylesheet" href="Footer/footer.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="indexCss.css">
+    <script src="https://kit.fontawesome.com/b1f8b0f99a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <img src="images/image-removebg-preview.png" alt="">
+        <div class="Navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="Navbar\About\about.html">About</a></li>
+                <li><a href="#">Companies</a></li>
+                <li><a href="Navbar/Contact/contact.html">Contact</a></li>
+                <li><a href="Navbar/Course/courses.html">Course</a></li>
+                <li><a href="#">Notifications</a></li>
+                <li><a href="#">Admin login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Home -->   
+    <section id="home">
+        <h2 class="highlight-para">Welcome to TPC Web Portal</h2>
+        <p class="highlight-para">The Training and Placement Cell (TPC) Web Portal is an online platform designed to
+            facilitate the training and placement processes for educational institutions.
+            It serves as a bridge between students, recruiters, and placement coordinators, streamlining communication
+            and management of placement activities.
+        </p>
+        <div class="btn">
+            <a class="yellow" href="Student Registration\StudentReg.html">Student Registration</a>
+            <!-- <a class="blue" href="form.html">sign up</a> -->
+        </div>
+    </section>
+    <body>
+
+        <div class="scontainer">
+            <!-- Text Section -->
+            <div class="text-scontainer">
+                <h2>Celebrating Our Recent Placements</h2>
+                <p>
+                    Congratulations to all the students who have been placed in prestigious companies. Your hard work
+                    and determination
+                    have paid off, and we are incredibly proud of your achievements. Keep striving for excellence, and
+                    we are sure
+                    you'll continue to make us proud!
+                </p>
+            </div>
+
+            <!-- Slider Section -->
+            <div class="slider-container">
+                <div class="slider" id="slider">
+                    <!-- Predefined slides with images -->
+                    <div class="slide">
+                        <img src="images/tpc img 2.jpg" alt="Student 1">
+
+                    </div>
+                    <div class="slide">
+                        <img src="images/tpc img 4.jpg" alt="Student 2">
+
+                    </div>
+                    <div class="slide">
+                        <img src="images/tpc img3.jpg" alt="Student 3">
+
+                    </div>
+                    <div class="slide">
+                        <img src="images/tpc img3.jpg" alt="Student 4">
+
+                    </div>
+                    <div class="slide">
+                        <img src="images/tpc imgg 5.jpg" alt="Student 5">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- grapgh -->
+        <div class="containers">
+            <div class="section">
+                <div class="chart-container left">
+                    <canvas id="placementChart"></canvas>
+                </div>
+                <div class="text-container right">
+                    <h2>Placement Distribution</h2>
+                    <p>This pie chart showcases the percentage and count of students placed in various companies. It
+                        provides a clear overview of company-wise placement stats.</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="text-container left">
+                    <h2>Annual Growth</h2>
+                    <p>This line chart represents the growth of student placements over the past few years. It
+                        demonstrates how the number of placements has evolved annually.</p>
+                </div>
+                <div class="chart-container right">
+                    <canvas id="growthChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+
+        
+     <style>
+        
+        .section1 {
+            text-align: center; /* Center content within the section */
+            margin: 40px 0; /* Add margin above and below the section */
+            width: 100%; /* Full width of the section */
+            /* max-width: 1200px; Optional: Limit the max width */
+        }
+        .section1 h2 {
+            margin-bottom: 20px; /* Add space below the heading */
+        }
+        .company-logos {
+            display: flex;
+            justify-content: space-between; /* Space logos evenly */
+            margin-top: 20px;
+        }
+        .company-logo {
+            flex-grow: 1; /* Allow logos to grow equally */
+            margin: 0 10px; /* Side margins for spacing */
+            max-width: 100px; /* Limit max width for logos */
+            height: auto; /* Maintain aspect ratio */
+            filter: grayscale(100%); /* Apply grayscale filter */
+            transition: filter 0.3s; /* Add transition for hover effect */
+            justify-content: center;
+            grid-column: inherit;
+        }
+        .company-logo:hover {
+            filter: grayscale(0%); /* Remove grayscale on hover */
+        }
+        @media (max-width: 600px) {
+            .company-logo {
+                max-width: 80px; /* Smaller width on mobile */
+            }
+        }
+    </style>
+
+
+    <section  class="section1">
+
+        <h2>Our Company Partners</h2>
+        <div class="company-logos">
+            <img src="images/accenture logo.jpeg" alt="Accenture Logo" class="company-logo"> 
+            <img src="images/cap gemini logo.png" alt="Infosys Logo" class="company-logo">
+            <img src="images/infosys logo.png" alt="Capgemini Logo" class="company-logo">
+            <img src="images/tcs logo.png " alt="TCS Logo" class="company-logo">
+            <img src="images/cap gemini logo.png" alt="Accenture Logo" class="company-logo"> 
+            <img src="images/infosys logo.png" alt="Infosys Logo" class="company-logo">
+            <img src="images/accenture logo.jpeg" alt="Capgemini Logo" class="company-logo">
+            <img src="images/tcs logo.png" alt="TCS Logo" class="company-logo">
+            
+        </div>
+    </section>
+
+
+        <!-- Recent News/Activities Section -->
+        <section class="news-section">
+            <h2>Recent News & Activities</h2>
+            <div class="news-list" id="newsList">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </section>
+
+
+        <!-- message -->
+        <div class="principal-message">
+            <div class="principal-photo">
+                <img src="images/princliple.jpeg">
+            </div>
+            <div class="principal-quote">
+                <p>"Education is the most powerful weapon which you can use to change the world."</p>
+                <p>DR.J.W.Bakal sir</p>
+            </div>
+        </div> 
+        
+        <footer class="footer">
+            <div class="footer-container">
+              <div class="footer-section">
+                <img src="images/image-removebg-preview.png" alt="TPC-PHCET Logo" class="logo">
+                <p>
+                  The <strong>Training and Placement Cell</strong> is an integral part of
+                  the PHCET Institution. The Placement Cell's primary objective is to
+                  provide training and placements to college students.
+                </p>
+              </div>
+              <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="Navbar/About/about.html">About</a></li>
+                  <li><a href="Navbar/Contact/contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <div class="footer-section">
+                <h3>Address</h3>
+                <address>
+                  Dist. Raigad, Via Panvel (Navi-Mumbai),<br>
+                  Rasayani, Tal. Khalapur 410207,<br>
+                  MH, India<br>
+                  Contact: 02192-669000<br>
+                  Email: tpctpcphcet@mes.ac.in
+                </address>
+              </div>
+              <div class="footer-section">
+                <h3>Other Services</h3>
+                <ul>
+                  <li><a href="#">LinkTree</a></li>
+                  <li><a href="#">PHCET</a></li>
+                </ul>
+                <div class="social-icons">
+                  <a href="https://www.instagram.com/tpc.phcet/"><img src="images/instagram.webp" alt="Instagram"></a>
+                  <a href="https://www.linkedin.com/company/tpc-phcet/"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                </div>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; Copyright 2025 | TPC-PHCET | All rights reserved.</p>
+            </div>
+          </footer>
+        
+        <script>
+            window.addEventListener('scroll', function () {
+                const nav = document.querySelector('nav');
+                if (window.scrollY > 600) { // Change the number here to adjust scroll threshold
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
+            window.addEventListener('scroll', function () {
+                const nav = document.querySelector('nav .Navigation ul li');
+                if (window.scrollY > 600) { // Change the number here to adjust scroll threshold
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
+        </script>
+        <script src="final.js
+        "></script>
+    </body>
+</html>
